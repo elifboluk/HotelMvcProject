@@ -24,17 +24,12 @@ namespace OtelMvcProject.Controllers
             return View();
         }
 
-        public ActionResult Hakkımızda()
+        public ActionResult Hakkimizda()
         {
             return View();
         }
 
-        public ActionResult Hizmetler()
-        {
-            return View();
-        }
-
-        public ActionResult iletişim()
+        public ActionResult iletisim()
         {
             return View();
         }
