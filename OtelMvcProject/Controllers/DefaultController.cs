@@ -38,5 +38,15 @@ namespace OtelMvcProject.Controllers
         {
             return View();
         }
+
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialSosyalMedya()
+        {
+            return PartialView();
+        }
     }
 }
