@@ -13,7 +13,28 @@ namespace OtelMvcProject.Controllers
         {
             return View();
         }
+
         public ActionResult Index2()
+        {
+            return View();
+        }
+
+        public ActionResult AnaSayfa()
+        {
+            return View();
+        }
+
+        public ActionResult Hakkımızda()
+        {
+            return View();
+        }
+
+        public ActionResult Hizmetler()
+        {
+            return View();
+        }
+
+        public ActionResult iletişim()
         {
             return View();
         }
