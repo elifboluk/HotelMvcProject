@@ -124,6 +124,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HizmetlerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\iletisimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -219,6 +220,7 @@
     <Content Include="Views\Hizmetler\Hizmet.cshtml" />
     <Content Include="Views\AnaSayfa\AnaSayfa.cshtml" />
     <Content Include="Views\AnaSayfa\Index.cshtml" />
+    <Content Include="Views\iletisim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
