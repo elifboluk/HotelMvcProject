@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Luxury Hotel Booking Widget Flat Responsive Widget Template :: w3layouts</title>
+    <title>Rezervasyon Paneli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="Error Page Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -22,9 +22,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href="~/hotels-starter/Rezervasyon/css/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="~/hotels-starter/Rezervasyon/css/bootstrap.css" rel='stylesheet' type='text/css' media="all">
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <script src="~/hotels-starter/Rezervasyon/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/hotels-starter/Rezervasyon/js/move-top.js"></script>
+    <script type="text/javascript" src="~/hotels-starter/Rezervasyon/js/easing.js"></script>
     <script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){
@@ -36,55 +36,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
     <div class="header">
-        <h1>Luxury Hotel Booking</h1>
+        <h1>Otel Rezervasyon Sayfası</h1>
     </div>
 
     <div class="banner-top">
-        <h2>Book Your Reservation!</h2>
+        <h2>Hemen Rezervasyonunuzu Yapın!</h2>
         <div class="banner-bottom">
             <div class="bnr-one">
                 <div class="bnr-left">
-                    <p>Check In</p>
+                    <p>Giriş Tarihi</p>
                 </div>
                 <div class="bnr-right">
-                    <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=>
+                    <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="bnr-one">
                 <div class="bnr-left">
-                    <p>Check Out</p>
+                    <p>Çıkış Tarihi</p>
                 </div>
                 <div class="bnr-right">
-                    <input class="date" id="datepicker1" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=>
+                    <input class="date" id="datepicker1" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="bnr-one">
                 <div class="bnr-left">
-                    <p>Adults</p>
+                    <p>Yetişkin Sayısı</p>
                 </div>
                 <div class="bnr-right">
                     <select>
-                        <option class="rm" value="volvo">0</option>
+                       
                         <option class="rm" value="saab">1</option>
                         <option class="rm" value="opel">2</option>
-                        <option class="rm" value="audi">3 or 3+</option>
+                        <option class="rm" value="audi">3</option>
+                        <option class="rm" value="audi">4++</option>
                     </select>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="bnr-one">
                 <div class="bnr-left">
-                    <p>Children</p>
+                    <p>Ad Soyad</p>
                 </div>
                 <div class="bnr-right">
-                    <select>
-                        <option class="rm" value="volvo">0</option>
-                        <option class="rm" value="saab">1</option>
-                        <option class="rm" value="opel">2</option>
-                        <option class="rm" value="audi">3 or 3+</option>
-                    </select>
+                    <input type="text"/>
+                    
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -109,8 +106,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
         <!---start-date-piker---->
-        <link rel="stylesheet" href="css/jquery-ui.css" />
-        <script src="js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="~/hotels-starter/Rezervasyon/css/jquery-ui.css" />
+        <script src="~/hotels-starter/Rezervasyon/js/jquery-ui.js"></script>
         <script>
 				$(function() {
 				$( "#datepicker,#datepicker1" ).datepicker();
