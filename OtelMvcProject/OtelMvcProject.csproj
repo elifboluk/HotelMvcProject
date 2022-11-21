@@ -125,6 +125,7 @@
     <Compile Include="Controllers\HizmetlerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\iletisimController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,6 +177,12 @@
     <Content Include="hotels-starter\assets\js\owl.carousel.js" />
     <Content Include="hotels-starter\contact.html" />
     <Content Include="hotels-starter\index.html" />
+    <Content Include="hotels-starter\Login\css\style.css" />
+    <Content Include="hotels-starter\Login\images\banner.jpg" />
+    <Content Include="hotels-starter\Login\index.html" />
+    <Content Include="hotels-starter\Login\js\index.js" />
+    <Content Include="hotels-starter\Login\js\particles.min.js" />
+    <Content Include="hotels-starter\Login\w3layouts-License.txt" />
     <Content Include="hotels-starter\services.html" />
     <Content Include="hotels-starter\starter-license-W3Layouts.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -221,6 +228,7 @@
     <Content Include="Views\AnaSayfa\AnaSayfa.cshtml" />
     <Content Include="Views\AnaSayfa\Index.cshtml" />
     <Content Include="Views\iletisim\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
