@@ -125,6 +125,7 @@
     <Compile Include="Controllers\HizmetlerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\iletisimController.cs" />
+    <Compile Include="Controllers\KayitController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -183,6 +184,13 @@
     <Content Include="hotels-starter\Login\js\index.js" />
     <Content Include="hotels-starter\Login\js\particles.min.js" />
     <Content Include="hotels-starter\Login\w3layouts-License.txt" />
+    <Content Include="hotels-starter\Register\css\font-awesome.css" />
+    <Content Include="hotels-starter\Register\css\style.css" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.svg" />
+    <Content Include="hotels-starter\Register\images\bg6.jpg" />
+    <Content Include="hotels-starter\Register\images\tick.png" />
+    <Content Include="hotels-starter\Register\index.html" />
+    <Content Include="hotels-starter\Register\w3layouts-License.txt" />
     <Content Include="hotels-starter\services.html" />
     <Content Include="hotels-starter\starter-license-W3Layouts.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -192,6 +200,11 @@
     <Content Include="hotels-starter\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="hotels-starter\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="hotels-starter\assets\fonts\FontAwesome.otf" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.eot" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.ttf" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.woff" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.woff2" />
+    <Content Include="hotels-starter\Register\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -229,6 +242,7 @@
     <Content Include="Views\AnaSayfa\Index.cshtml" />
     <Content Include="Views\iletisim\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Kayit\KayitOl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
