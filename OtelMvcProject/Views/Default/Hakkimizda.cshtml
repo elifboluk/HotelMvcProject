@@ -17,35 +17,16 @@
         </div>
     </div>
 </section>
+@foreach (var x in Model)
+{
+
 <div class="w3l-about-us best-rooms py-5">
     <div class="container py-lg-5 py-sm-4">
         <div class="maghny-gd-1">
             <div class="row about-text">
                 <div class="col-lg-6">
-                    <h3 class="title-big">
-                        MERHABA 
-                    </h3>
-                    <table class="table table-bordered">
-                        <tr>
-                            @*satır*@
-                            <th>
-                                @*sütun başlık*@
-                                ID
-                            </th>
-                            <th>Şehir</th>
-                            <th>İlçe</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Adana</td>
-                            <td>Seyhan</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Ankara</td>
-                            <td>Mamak</td>
-                        </tr>
-                    </table>
+                    <h3 class="title-big">MERHABA</h3>
+                    
                 </div>
                 <div class="col-lg-6">
                     <p>
@@ -385,5 +366,6 @@
         </div>
     </div>
     <!-- /main-slider -->
+    
 </section>
-
+}
