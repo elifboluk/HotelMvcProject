@@ -1,6 +1,9 @@
-﻿
+﻿@using OtelMvcProject.Models.Entity
+@model List<TblHakkimda>
+
+
 @{
-    ViewBag.Title = "Hakkımızda";
+    ViewBag.Title = "Hakkimizda";
     Layout = "~/Views/Shared/_OtelVitrin.cshtml";
 }
 
@@ -20,13 +23,33 @@
             <div class="row about-text">
                 <div class="col-lg-6">
                     <h3 class="title-big">
-                        Best luxury Hotel in London since 2000. Our hotel has been present for over 20
-                        years.
+                        MERHABA 
                     </h3>
+                    <table class="table table-bordered">
+                        <tr>
+                            @*satır*@
+                            <th>
+                                @*sütun başlık*@
+                                ID
+                            </th>
+                            <th>Şehir</th>
+                            <th>İlçe</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Adana</td>
+                            <td>Seyhan</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ankara</td>
+                            <td>Mamak</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="col-lg-6">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempore sapiente, distinctio
+                        Lorem ipsum dolor sit amet consectetur (adipisicing elit. Fugit tempore sapiente, distinctio
                         perferendis voluptas consequatur quaerat incidunt. Similique, officia! Dolorum fugiat et aliquam
                         necessitatibus quas reiciendis, totam voluptatibus deleniti tempore doloribus dolor modi, ab
                         facilis quam officiis ipsam doloremque.
