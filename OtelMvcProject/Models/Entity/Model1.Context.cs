@@ -26,5 +26,6 @@ namespace OtelMvcProject.Models.Entity
         }
     
         public virtual DbSet<TblHakkimda> TblHakkimda { get; set; }
+        public virtual DbSet<Tbliletisim> Tbliletisim { get; set; }
     }
 }
