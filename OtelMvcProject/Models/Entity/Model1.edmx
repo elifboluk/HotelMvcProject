@@ -28,8 +28,19 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
           <Property Name="Adres" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="TblMesaj">
+          <Key>
+            <PropertyRef Name="MesajID" />
+          </Key>
+          <Property Name="MesajID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gonderen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Konu" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mesaj" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityContainer Name="DbOtelModelStoreContainer">
           <EntitySet Name="Tbliletisim" EntityType="Self.Tbliletisim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMesaj" EntityType="Self.TblMesaj" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblHakkimda" EntityType="Self.TblHakkimda" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [TblHakkimda].[ID] AS [ID], 
@@ -57,6 +68,7 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
         <EntityContainer Name="DbOtelEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblHakkimda" EntityType="Self.TblHakkimda" />
           <EntitySet Name="Tbliletisim" EntityType="DbOtelModel.Tbliletisim" />
+          <EntitySet Name="TblMesaj" EntityType="DbOtelModel.TblMesaj" />
         </EntityContainer>
         <EntityType Name="Tbliletisim">
           <Key>
@@ -68,6 +80,16 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
           <Property Name="Telefon" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Adres" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblMesaj">
+          <Key>
+            <PropertyRef Name="MesajID" />
+          </Key>
+          <Property Name="MesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gonderen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mesaj" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -95,6 +117,17 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
                 <ScalarProperty Name="Koordinat" ColumnName="Koordinat" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMesaj">
+            <EntityTypeMapping TypeName="DbOtelModel.TblMesaj">
+              <MappingFragment StoreEntitySet="TblMesaj">
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+                <ScalarProperty Name="Konu" ColumnName="Konu" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Gonderen" ColumnName="Gonderen" />
+                <ScalarProperty Name="MesajID" ColumnName="MesajID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
