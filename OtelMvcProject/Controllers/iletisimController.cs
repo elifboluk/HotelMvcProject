@@ -16,8 +16,18 @@ namespace OtelMvcProject.Controllers
             var bilgiler = db.Tbliletisim.ToList();
             return View(bilgiler);
         }
+
+        [HttpGet] // Sadece sayfa yenilendiğinde çalışacak bölüm
         public PartialViewResult MesajGonder()
         {
+            return PartialView();
+        }
+
+        [HttpPost] // Butonla birlikte çalışacak bölüm
+        public PartialViewResult MesajGonder(TblMesaj p)
+        {
+            db.TblMesaj.Add(p);
+            db.SaveChanges();
             return PartialView();
         }
     }

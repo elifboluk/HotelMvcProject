@@ -1,17 +1,22 @@
-﻿<div class="map-content-9 mt-lg-0 mt-4">
-    <form action="https://sendmail.w3layouts.com/submitForm" method="post">
+﻿@model OtelMvcProject.Models.Entity.TblMesaj
+
+
+
+<div class="map-content-9 mt-lg-0 mt-4">
+    <form method="post">
         <div class="twice-two">
-            <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Adınız"
+            <input type="text" class="form-control" name="Gonderen" placeholder="Adınız & Soyadınız"
                    required="">
-            <input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Mail Adresiniz"
+            <input type="email" class="form-control" name="Mail"  placeholder="Mail Adresiniz"
                    required="">
         </div>
         <div class="twice">
-            <input type="text" class="form-control" name="w3lSubject" id="w3lSubject"
+            <input type="text" class="form-control" name="Konu" 
                    placeholder="Konu" required="">
         </div>
-        <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Mesajınız"
+        <textarea name="Mesaj" class="form-control"  placeholder="Mesajınız"
                   required=""></textarea>
-        <button type="submit" class="btn btn-contact">Mesajı Gönder</button>
+        
+        <button type="submit" class="btn btn-contact" onclick='alert("Mesajınız başarıyla gönderildi.")'>Mesajı Gönder</button>
     </form>
 </div>
