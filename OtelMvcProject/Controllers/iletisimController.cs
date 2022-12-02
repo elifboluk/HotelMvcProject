@@ -16,5 +16,9 @@ namespace OtelMvcProject.Controllers
             var bilgiler = db.Tbliletisim.ToList();
             return View(bilgiler);
         }
+        public PartialViewResult MesajGonder()
+        {
+            return PartialView();
+        }
     }
 }
