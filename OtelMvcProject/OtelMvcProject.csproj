@@ -135,6 +135,7 @@
     <Compile Include="Controllers\iletisimController.cs" />
     <Compile Include="Controllers\KayitController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MisafirController.cs" />
     <Compile Include="Controllers\RezervasyonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +243,45 @@
     <Content Include="hotels-starter\Rezervasyon\w3layouts-License.txt" />
     <Content Include="hotels-starter\services.html" />
     <Content Include="hotels-starter\starter-license-W3Layouts.txt" />
+    <Content Include="hotels-starter\WebMisafirPanel\.gitignore" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\401.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\404.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\500.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\assets\demo\chart-area-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\assets\demo\chart-bar-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\assets\demo\chart-pie-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\assets\demo\datatables-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\assets\img\error-404-monochrome.svg" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\charts.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\css\1.png" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\css\styles.css" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\index.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\js\scripts.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\layout-sidenav-light.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\layout-static.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\login.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\password.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\register.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\dist\tables.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\index.html" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\build-assets.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\build-pug.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\build-scripts.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\build-scss.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\clean.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\render-assets.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\render-pug.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\render-scripts.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\render-scss.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\sb-watch.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\start-debug.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\scripts\start.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\assets\demo\chart-area-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\assets\demo\chart-bar-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\assets\demo\chart-pie-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\assets\demo\datatables-demo.js" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\assets\img\error-404-monochrome.svg" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\js\scripts.js" />
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -271,6 +311,50 @@
     <Content Include="Models\Entity\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="hotels-starter\WebMisafirPanel\.browserslistrc" />
+    <Content Include="hotels-starter\WebMisafirPanel\.travis.yml" />
+    <Content Include="hotels-starter\WebMisafirPanel\LICENSE" />
+    <Content Include="hotels-starter\WebMisafirPanel\package-lock.json" />
+    <Content Include="hotels-starter\WebMisafirPanel\package.json" />
+    <Content Include="hotels-starter\WebMisafirPanel\README.md" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\authentication.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\dashboard.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\error.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\footer.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\head\css.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\head\icons.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\head\meta.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\head\title.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\navigation\sidenav.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\navigation\topnav.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\layouts\includes\scripts.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\401.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\404.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\500.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\charts.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\includes\datatable.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\includes\page-header.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\index.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\layout-sidenav-light.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\layout-static.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\login.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\password.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\register.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\pug\pages\tables.pug" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\layout\_authentication.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\layout\_dashboard-default.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\layout\_dashboard-fixed.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\layout\_error.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\navigation\sidenav\_sidenav-dark.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\navigation\sidenav\_sidenav-light.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\navigation\sidenav\_sidenav.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\navigation\_nav.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\navigation\_topnav.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\styles.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\variables\_navigation.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\variables\_spacing.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\_global.scss" />
+    <Content Include="hotels-starter\WebMisafirPanel\src\scss\_variables.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -309,6 +393,8 @@
     <Content Include="Views\Kayit\KayitOl.cshtml" />
     <Content Include="Views\Rezervasyon\Index.cshtml" />
     <Content Include="Views\iletisim\MesajGonder.cshtml" />
+    <Content Include="Views\Shared\_MisafirLayout.cshtml" />
+    <Content Include="Views\Misafir\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

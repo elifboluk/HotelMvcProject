@@ -27,7 +27,7 @@ namespace OtelMvcProject.Controllers
                 //giriş
                 FormsAuthentication.SetAuthCookie(bilgiler.Mail, false);
                 Session["Mail"] = bilgiler.Mail.ToString(); // Session:oturum, oturum değerimiz mail olacak.
-                return RedirectToAction("Index","AnaSayfa");
+                return RedirectToAction("Index","Misafir");
             }
             else
             {
