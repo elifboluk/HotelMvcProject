@@ -395,6 +395,7 @@
     <Content Include="Views\iletisim\MesajGonder.cshtml" />
     <Content Include="Views\Shared\_MisafirLayout.cshtml" />
     <Content Include="Views\Misafir\Index.cshtml" />
+    <Content Include="Views\Misafir\Rezervasyonlarim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

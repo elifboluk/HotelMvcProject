@@ -13,5 +13,10 @@ namespace OtelMvcProject.Controllers
         {
             return View();
         }
+
+        public ActionResult Rezervasyonlarim()
+        {
+            return View();
+        }
     }
 }
