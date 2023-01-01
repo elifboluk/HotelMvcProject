@@ -33,7 +33,7 @@ namespace OtelMvcProject.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View();
+            
         }
     }
 
