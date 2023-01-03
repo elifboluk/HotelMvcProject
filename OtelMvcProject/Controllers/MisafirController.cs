@@ -27,9 +27,14 @@ namespace OtelMvcProject.Controllers
             return View(degerler);
         }
 
-        public ActionResult MisafirBilgiGuncelle()
+        public ActionResult MisafirBilgiGuncelle(TblYeniKayit p)
         {
-            return View();
+            var misafir = db.TblYeniKayit.Find(p.ID);
+            misafir.AdSoyad = p.AdSoyad;
+            misafir.Sifre = p.Sifre;
+            misafir.Telefon = p.Telefon;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
