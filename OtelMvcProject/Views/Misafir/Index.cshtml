@@ -1,5 +1,4 @@
-﻿@using OtelMvcProject.Models.Entity
-@model List<TblYeniKayit>
+﻿@model OtelMvcProject.Models.Entity.TblYeniKayit
 
 @{
     ViewBag.Title = "Index";
@@ -7,35 +6,36 @@
 }
 
 <h2>Profil Sayfası</h2>
-
-<div class="form-group">
-    @Html.Label("Ad Soyad")
-    <input type="text" name="Ad Soyad" class="form-control" />
-    <br />
-
-    @Html.Label("Telefon")
-    <input type="text" name="Telefon" class="form-control" />
-    <br />
-
-    @Html.Label("Şifre")
-    <input type="text" name="Sifre" class="form-control" />
-    <br />
-    
-    <button class="btn btn-warning">Bilgileri Güncelle</button>
-
-</div>
+<br />
+@using (Html.BeginForm("MisafirBilgiGuncelle", "Misafir", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.ID, new { @class = "form-control" })
+        <br />
+        <label>Ad Soyad</label>
+        @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+        <br />
+        @Html.Label("Telefon")
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+        <br />
+        @Html.Label("Şifre")
+        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-warning">Bilgileri Güncelle</button>
+    </div>
+}
 
 @*<table>
-    <tr>
-        <th>ID</th>
-        <th>Ad</th>
-    </tr>
-    @foreach (var x in Model)
-    {
         <tr>
-            <td>@x.ID</td>
-            <td>@x.AdSoyad</td>
+            <th>ID</th>
+            <th>Ad</th>
         </tr>
-    }
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.AdSoyad</td>
+            </tr>
+        }
 
-</table>*@
+    </table>*@

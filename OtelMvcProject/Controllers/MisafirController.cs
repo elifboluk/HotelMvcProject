@@ -15,7 +15,7 @@ namespace OtelMvcProject.Controllers
         public ActionResult Index()
         {
             var misafirmail = (string)Session["Mail"];
-            var misafirbilgi = db.TblYeniKayit.Where(x => x.Mail == misafirmail).ToList();
+            var misafirbilgi = db.TblYeniKayit.Where(x => x.Mail == misafirmail).FirstOrDefault(); // Sadece sisteme giriş yapan kullanıcının verilerini getir.
             return View(misafirbilgi);
         }
 
@@ -26,5 +26,12 @@ namespace OtelMvcProject.Controllers
             var degerler = db.TblRezervasyon.Where(x => x.Misafir == 2).ToList();
             return View(degerler);
         }
+
+        public ActionResult MisafirBilgiGuncelle()
+        {
+            return View();
+        }
     }
 }
+
+// FirstOrDefault: Sadece bir tane kayıt seçme durumlarında kullanılan bir entitylinq metodudur.
