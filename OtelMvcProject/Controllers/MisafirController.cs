@@ -8,6 +8,7 @@ using OtelMvcProject.Models.Entity;
 
 namespace OtelMvcProject.Controllers
 {
+    [Authorize]
     public class MisafirController : Controller
     {
         DbOtelEntities db = new DbOtelEntities();
