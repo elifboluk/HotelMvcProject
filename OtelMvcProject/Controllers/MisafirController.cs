@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using OtelMvcProject.Models.Entity;
 
 namespace OtelMvcProject.Controllers
@@ -37,6 +38,13 @@ namespace OtelMvcProject.Controllers
             misafir.Telefon = p.Telefon;
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "AnaSayfa"); 
         }
     }
 }
