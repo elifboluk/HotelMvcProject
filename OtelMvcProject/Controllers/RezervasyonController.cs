@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OtelMvcProject.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,22 @@ namespace OtelMvcProject.Controllers
 {
     public class RezervasyonController : Controller
     {
+        DbOtelEntities db = new DbOtelEntities();
+        
         // GET: Rezervasyon
+        [Authorize]
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(TblRezervasyon p)
+        {
+            db.TblRezervasyon.Add(p);
+            db.SaveChanges();            
+            return RedirectToAction("Rezervasyonlarim","Misafir");
         }
     }
 }
