@@ -48,7 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Giriş Tarihi</p>
                     </div>
                     <div class="bnr-right">
-                        <input class="date" type="date" name="GirisTarih" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                        <input type="date" name="GirisTarih" required="" class="form-control" />
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -57,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Çıkış Tarihi</p>
                     </div>
                     <div class="bnr-right">
-                        <input class="date" type="date" name="CikisTarih" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                        <input type="date" name="CikisTarih" required="" class="form-control" />
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -66,13 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Kişi Sayısı</p>
                     </div>
                     <div class="bnr-right">
-                        <select>
-                            <option class="rm" value="volvo">Kişi sayısı seçin</option>
-                            <option class="rm" value="saab">1</option>
-                            <option class="rm" value="opel">2</option>
-                            <option class="rm" value="audi">3</option>
-                            <option class="rm" value="audi">4++</option>
-                        </select>
+                        <input type="number" value="1" name="Kisi" class="form-control"/>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -82,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Ad Soyad</p>
                     </div>
                     <div class="bnr-right">
-                        <input type="text" name="RezervasyonAdSoyad"/>
+                        <input type="text" name="RezervasyonAdSoyad" class="form-control"/>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -92,7 +86,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Telefon</p>
                     </div>
                     <div class="bnr-right">
-                        <input type="text" name="Telefon" />
+                        <input type="text" name="Telefon" class="form-control"/>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -102,7 +96,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <p>Açıklama</p>
                     </div>
                     <div class="bnr-right">
-                        <textarea name="Aciklama" rows="6" cols="38"></textarea>
+                        <textarea name="Aciklama" rows="6" cols="35" class="form-control"></textarea>
                     </div>
                     <div class="clearfix"></div>
                 </div>
