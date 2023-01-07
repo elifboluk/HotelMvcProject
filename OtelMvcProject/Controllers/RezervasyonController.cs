@@ -22,6 +22,7 @@ namespace OtelMvcProject.Controllers
         [HttpPost]
         public ActionResult Index(TblRezervasyon p)
         {
+            p.Durum = 15;
             db.TblRezervasyon.Add(p);
             db.SaveChanges();            
             return RedirectToAction("Rezervasyonlarim","Misafir");
