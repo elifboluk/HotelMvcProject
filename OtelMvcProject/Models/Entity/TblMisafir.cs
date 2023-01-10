@@ -18,6 +18,7 @@ namespace OtelMvcProject.Models.Entity
         public TblMisafir()
         {
             this.TblRezervasyon = new HashSet<TblRezervasyon>();
+            this.TblMesaj2 = new HashSet<TblMesaj2>();
         }
     
         public int MisafirID { get; set; }
@@ -36,5 +37,7 @@ namespace OtelMvcProject.Models.Entity
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblRezervasyon> TblRezervasyon { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblMesaj2> TblMesaj2 { get; set; }
     }
 }
