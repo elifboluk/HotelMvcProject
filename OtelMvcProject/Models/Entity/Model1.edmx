@@ -43,10 +43,11 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
             <PropertyRef Name="MesajID" />
           </Key>
           <Property Name="MesajID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Gonderen" Type="int" />
+          <Property Name="Gonderen" Type="nvarchar" MaxLength="100" />
           <Property Name="Konu" Type="nvarchar" MaxLength="100" />
           <Property Name="Mesaj" Type="nvarchar(max)" />
           <Property Name="Tarih" Type="date" />
+          <Property Name="Alici" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="TblMisafir">
           <Key>
@@ -91,18 +92,6 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK_TblMesaj2_TblMisafir">
-          <End Role="TblMisafir" Type="Self.TblMisafir" Multiplicity="0..1" />
-          <End Role="TblMesaj2" Type="Self.TblMesaj2" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblMisafir">
-              <PropertyRef Name="MisafirID" />
-            </Principal>
-            <Dependent Role="TblMesaj2">
-              <PropertyRef Name="Gonderen" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TblRezervasyon_TblMisafir">
           <End Role="TblMisafir" Type="Self.TblMisafir" Multiplicity="0..1" />
           <End Role="TblRezervasyon" Type="Self.TblRezervasyon" Multiplicity="*" />
@@ -131,10 +120,6 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
     [TblHakkimda].[Hakkimda4] AS [Hakkimda4]
     FROM [dbo].[TblHakkimda] AS [TblHakkimda]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK_TblMesaj2_TblMisafir" Association="Self.FK_TblMesaj2_TblMisafir">
-            <End Role="TblMisafir" EntitySet="TblMisafir" />
-            <End Role="TblMesaj2" EntitySet="TblMesaj2" />
-          </AssociationSet>
           <AssociationSet Name="FK_TblRezervasyon_TblMisafir" Association="Self.FK_TblRezervasyon_TblMisafir">
             <End Role="TblMisafir" EntitySet="TblMisafir" />
             <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
@@ -166,10 +151,6 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
             <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
           </AssociationSet>
           <EntitySet Name="TblMesaj2" EntityType="DbOtelModel.TblMesaj2" />
-          <AssociationSet Name="FK_TblMesaj2_TblMisafir" Association="DbOtelModel.FK_TblMesaj2_TblMisafir">
-            <End Role="TblMisafir" EntitySet="TblMisafir" />
-            <End Role="TblMesaj2" EntitySet="TblMesaj2" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Tbliletisim">
           <Key>
@@ -220,7 +201,6 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
           <Property Name="ilce" Type="Int32" />
           <Property Name="Durum" Type="Int32" />
           <NavigationProperty Name="TblRezervasyon" Relationship="DbOtelModel.FK_TblRezervasyon_TblMisafir" FromRole="TblMisafir" ToRole="TblRezervasyon" />
-          <NavigationProperty Name="TblMesaj2" Relationship="DbOtelModel.FK_TblMesaj2_TblMisafir" FromRole="TblMisafir" ToRole="TblMesaj2" />
         </EntityType>
         <EntityType Name="TblRezervasyon">
           <Key>
@@ -255,24 +235,12 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
             <PropertyRef Name="MesajID" />
           </Key>
           <Property Name="MesajID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Gonderen" Type="Int32" />
+          <Property Name="Gonderen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Konu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="TblMisafir" Relationship="DbOtelModel.FK_TblMesaj2_TblMisafir" FromRole="TblMesaj2" ToRole="TblMisafir" />
+          <Property Name="Alici" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK_TblMesaj2_TblMisafir">
-          <End Type="DbOtelModel.TblMisafir" Role="TblMisafir" Multiplicity="0..1" />
-          <End Type="DbOtelModel.TblMesaj2" Role="TblMesaj2" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblMisafir">
-              <PropertyRef Name="MisafirID" />
-            </Principal>
-            <Dependent Role="TblMesaj2">
-              <PropertyRef Name="Gonderen" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -362,6 +330,7 @@ warning 6002: The table/view 'DbOtel.dbo.TblHakkimda' does not have a primary ke
           <EntitySetMapping Name="TblMesaj2">
             <EntityTypeMapping TypeName="DbOtelModel.TblMesaj2">
               <MappingFragment StoreEntitySet="TblMesaj2">
+                <ScalarProperty Name="Alici" ColumnName="Alici" />
                 <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
                 <ScalarProperty Name="Konu" ColumnName="Konu" />

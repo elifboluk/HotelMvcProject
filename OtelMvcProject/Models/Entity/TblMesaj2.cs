@@ -15,11 +15,10 @@ namespace OtelMvcProject.Models.Entity
     public partial class TblMesaj2
     {
         public int MesajID { get; set; }
-        public Nullable<int> Gonderen { get; set; }
+        public string Gonderen { get; set; }
         public string Konu { get; set; }
         public string Mesaj { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
-    
-        public virtual TblMisafir TblMisafir { get; set; }
+        public string Alici { get; set; }
     }
 }

@@ -47,6 +47,13 @@ namespace OtelMvcProject.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "AnaSayfa"); 
         }
+
+        public ActionResult GelenMesajlar() 
+        {
+            var misafirmail = (string)Session["Mail"];
+            var mesajlar = db.TblMesaj2.Where(x => x.Alici == misafirmail).ToList();
+            return View(mesajlar);
+        }
     }
 }
 

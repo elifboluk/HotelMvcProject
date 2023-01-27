@@ -405,6 +405,7 @@
     <Content Include="Views\Shared\_MisafirLayout.cshtml" />
     <Content Include="Views\Misafir\Index.cshtml" />
     <Content Include="Views\Misafir\Rezervasyonlarim.cshtml" />
+    <Content Include="Views\Misafir\GelenMesajlar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
