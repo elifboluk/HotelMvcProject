@@ -406,6 +406,8 @@
     <Content Include="Views\Misafir\Index.cshtml" />
     <Content Include="Views\Misafir\Rezervasyonlarim.cshtml" />
     <Content Include="Views\Misafir\GelenMesajlar.cshtml" />
+    <Content Include="Views\Misafir\GidenMesajlar.cshtml" />
+    <Content Include="Views\Misafir\MesajDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
