@@ -16,6 +16,11 @@ namespace OtelMvcProject.Controllers
             return View(veriler);
         }
         
+        public PartialViewResult Ekibimiz()
+        {
+            return PartialView();
+        }
+        
         public PartialViewResult PartialFooter()
         {
             var doluoda = db.TblOda.Where(x => x.Durum != 1).Count();
