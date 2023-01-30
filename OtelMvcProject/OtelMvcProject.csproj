@@ -416,6 +416,8 @@
     <Content Include="Views\Misafir\MesajDetay.cshtml" />
     <Content Include="Views\Misafir\YeniMesaj.cshtml" />
     <Content Include="Views\Default\Ekibimiz.cshtml" />
+    <Content Include="Views\Default\istatistik.cshtml" />
+    <Content Include="Views\Default\Referans.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
