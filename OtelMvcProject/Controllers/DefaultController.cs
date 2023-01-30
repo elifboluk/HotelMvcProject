@@ -18,6 +18,10 @@ namespace OtelMvcProject.Controllers
         
         public PartialViewResult PartialFooter()
         {
+            var doluoda = db.TblOda.Where(x => x.Durum != 1).Count();
+            ViewBag.d = doluoda;
+            var bosoda = db.TblOda.Where(x => x.Durum == 1).Count();
+            ViewBag.b = bosoda;
             return PartialView();
         }
 
