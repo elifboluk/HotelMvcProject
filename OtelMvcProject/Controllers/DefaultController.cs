@@ -18,7 +18,8 @@ namespace OtelMvcProject.Controllers
         
         public PartialViewResult Ekibimiz()
         {
-            return PartialView();
+            var ekiplistesi = db.TblEkibimiz.ToList();
+            return PartialView(ekiplistesi);
         }
         
         public PartialViewResult PartialFooter()
