@@ -20,14 +20,16 @@ namespace OtelMvcProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(TblRezervasyon p)
+        public ActionResult Index(TblOnRezervasyon p)
         {
             var misafirmail = (string)Session["Mail"];
-            var misafirid = db.TblYeniKayit.Where(x => x.Mail == misafirmail).Select(x => x.ID).FirstOrDefault(); // Sadece sisteme giriş yapan kullanıcının verilerini getir.
+            // var misafirid = db.TblYeniKayit.Where(x => x.Mail == misafirmail).Select(x => x.ID).FirstOrDefault(); // Sadece sisteme giriş yapan kullanıcının verilerini getir.
 
-            p.Durum = 3005;
-            p.Misafir = misafirid;
-            db.TblRezervasyon.Add(p);
+            // p.Durum = 3005;
+            // p.Misafir = misafirid;
+            p.Mail = misafirmail;
+            p.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.TblOnRezervasyon.Add(p);
             db.SaveChanges();            
             return RedirectToAction("Rezervasyonlarim","Misafir");
         }
